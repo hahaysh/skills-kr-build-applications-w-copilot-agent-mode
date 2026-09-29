@@ -1,15 +1,15 @@
 ---
 applyTo: "octofit-tracker/backend/**"
 ---
-# Octofit Tracker Logic + Data Tier Guidelines
+# Octofit Tracker 로직 및 데이터 계층 지침
 
-## Logic tier (Node.js + Express + TypeScript)
+## 로직 계층(Node.js + Express + TypeScript)
 
-- Build API routes under `/api/`.
-- Keep API service on port `8000`.
-- Use environment-aware Codespaces URLs via `CODESPACE_NAME`.
+- `/api/` 아래에 API 라우트를 빌드하세요.
+- API 서비스를 포트 `8000`에서 유지하세요.
+- `CODESPACE_NAME`을 통해 환경을 인식하는 Codespaces URL을 사용하세요.
 
-Example base URL logic:
+기본 URL 로직 예시:
 
 ```ts
 const codespaceName = process.env.CODESPACE_NAME;
@@ -18,8 +18,8 @@ const baseUrl = codespaceName
   : 'http://localhost:8000';
 ```
 
-## Data tier (MongoDB + Mongoose)
+## 데이터 계층(MongoDB + Mongoose)
 
-- Use Mongoose models for users, teams, activities, leaderboard, and workouts.
-- Connect to `octofit_db`.
-- Validate endpoints with `curl` after wiring routes.
+- 사용자, 팀, 활동, 리더보드, 운동에 Mongoose 모델을 사용하세요.
+- `octofit_db`에 연결하세요.
+- 라우트를 연결한 후 `curl`로 엔드포인트를 검증하세요.

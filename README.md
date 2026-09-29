@@ -1,50 +1,50 @@
-# Build applications with GitHub Copilot agent mode
+# GitHub Copilot 에이전트 모드로 애플리케이션 빌드하기
 
 <!-- ![](../../actions/workflows/0-start-course.yml/badge.svg?branch=main) -->
 <img src="https://github.com/user-attachments/assets/1b3ea5df-f18d-4ed8-9ae6-f96dc1861818" alt="octofit-tracker" width="300"/>
 
-_Build an application with GitHub Copilot agent mode in less than an hour._
+_한 시간 이내에 GitHub Copilot 에이전트 모드로 애플리케이션을 빌드해 보세요._
 
-## Welcome
+## 환영합니다
 
-People love how GitHub Copilot helps them write code faster and with fewer errors.
-But what if GitHub could create a multi-tier application with a presentation, logic, and data layers based on requirements written in natural language?
-In this exercise, we will prompt GitHub Copilot agent mode to create a complete application.
+GitHub Copilot은 더 적은 오류로 코드를 더 빠르게 작성하도록 도와주어 많은 사랑을 받고 있습니다.
+그렇다면 GitHub가 자연어로 작성된 요구 사항을 바탕으로 프레젠테이션, 로직, 데이터 계층을 갖춘 다중 계층 애플리케이션을 만들 수 있다면 어떨까요?
+이 실습에서는 GitHub Copilot 에이전트 모드에 프롬프트를 입력하여 완전한 애플리케이션을 만듭니다.
 
-- **Who is this for**: Intermediate developers familiar with GitHub Copilot, basic GitHub, and basic web development
-- **What you'll learn**: We'll introduce GitHub Copilot agent mode and how to use it for application development.
-- **What you'll build**: You'll use GitHub Copilot agent mode to create a fitness application as the gym teacher of a high school.
-- **Prerequisites**: Skills Exercise: <a href="https://github.com/skills/getting-started-with-github-copilot">Getting Started with GitHub Copilot</a>.
-- **How long**: This course takes less than one hour to complete.
+- **대상**: GitHub Copilot, GitHub 기본 기능, 웹 개발 기초에 익숙한 중급 개발자
+- **학습 내용**: GitHub Copilot 에이전트 모드와 이를 애플리케이션 개발에 사용하는 방법을 소개합니다.
+- **빌드할 항목**: 고등학교 체육 교사의 입장에서 GitHub Copilot 에이전트 모드를 사용하여 피트니스 애플리케이션을 만듭니다.
+- **필수 조건**: Skills 실습: <a href="https://github.com/skills/getting-started-with-github-copilot">GitHub Copilot 시작하기</a>.
+- **소요 시간**: 이 과정은 한 시간 이내에 완료할 수 있습니다.
 
-In this exercise, you will:
+이 실습에서는 다음을 수행합니다.
 
-1. Start up a preconfigured development environment for making a multi-tier application.
-1. Prompt in GitHub Copilot Chat and select the edit tab and select agent mode from the edit/agent drop-down.
-1. In this exercise I primarily used the latest default LLM.
-1. Try other LLM models to see other output.
-1. For each step open up a new Copilot Chat session by hitting the plus `+` icon in the Copilot Chat pane.
+1. 다중 계층 애플리케이션을 만들기 위해 미리 구성된 개발 환경을 시작합니다.
+1. GitHub Copilot Chat에 프롬프트를 입력하고 편집 탭을 선택한 다음 편집/에이전트 드롭다운에서 에이전트 모드를 선택합니다.
+1. 이 실습에서는 주로 최신 기본 LLM을 사용합니다.
+1. 다른 LLM 모델을 사용하여 결과를 비교해 봅니다.
+1. 각 단계에서 Copilot Chat 창의 더하기 `+` 아이콘을 눌러 새 Copilot Chat 세션을 엽니다.
 
-### How to start this exercise
+### 실습 시작 방법
 
-Simply copy the exercise to your account, then give your favorite Octocat (Mona) **about 20 seconds** to prepare the first lesson, then **refresh the page**.
+실습을 계정으로 복사하고, 여러분이 좋아하는 Octocat(Mona)이 첫 번째 학습 내용을 준비하도록 **약 20초 동안** 기다린 다음 **페이지를 새로 고치세요**.
 
 [![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=build-applications-w-copilot-agent-mode&owner=%40me&name=skills-build-applications-w-copilot-agent-mode&description=Exercise:+Build+applications+with+GitHub+Copilot+agent+mode&visibility=public)
 
 <details>
-<summary>Having trouble? 🤷</summary><br/>
+<summary>문제가 있나요? 🤷</summary><br/>
 
-When copying the exercise, we recommend the following settings:
+실습을 복사할 때 다음 설정을 권장합니다.
 
-- For owner, choose your personal account or an organization to host the repository.
+- 소유자로 리포지토리를 호스팅할 개인 계정 또는 조직을 선택합니다.
 
-- We recommend creating a public repository, since private repositories will use Actions minutes.
+- 비공개 리포지토리는 Actions 시간을 사용하므로 공개 리포지토리를 만드는 것이 좋습니다.
 
-If the exercise isn't ready in 20 seconds, please check the "Actions" tab of your repository (or visit `https://github.com/<YOUR-USERNAME>/<YOUR-REPO>/actions`).
+실습이 20초 이내에 준비되지 않으면 리포지토리의 "Actions" 탭을 확인하세요(또는 `https://github.com/<YOUR-USERNAME>/<YOUR-REPO>/actions`를 방문하세요).
 
-- Check to see if a job is running. Sometimes it simply takes a bit longer.
+- 작업이 실행 중인지 확인하세요. 때로는 시간이 조금 더 걸릴 수 있습니다.
 
-- If the page shows a failed job, please submit an issue. Nice, you found a bug! 🐛
+- 페이지에 실패한 작업이 표시되면 이슈를 제출해 주세요. 축하합니다. 버그를 찾으셨군요! 🐛
 
 </details>
 
