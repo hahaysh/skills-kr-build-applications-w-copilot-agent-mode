@@ -29,7 +29,7 @@ GitHub Copilot은 더 적은 오류로 코드를 더 빠르게 작성하도록 �
 
 실습을 계정으로 복사하고, 여러분이 좋아하는 Octocat(Mona)이 첫 번째 학습 내용을 준비하도록 **약 20초 동안** 기다린 다음 **페이지를 새로 고치세요**.
 
-[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=build-applications-w-copilot-agent-mode&owner=%40me&name=skills-build-applications-w-copilot-agent-mode&description=Exercise:+Build+applications+with+GitHub+Copilot+agent+mode&visibility=public)
+[![](https://img.shields.io/badge/Copy%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/new?template_owner=skills&template_name=skills-kr-build-applications-w-copilot-agent-mode&owner=%40me&name=skills-build-applications-w-copilot-agent-mode&description=Exercise:+Build+applications+with+GitHub+Copilot+agent+mode&visibility=public)
 
 <details>
 <summary>문제가 있나요? 🤷</summary><br/>
